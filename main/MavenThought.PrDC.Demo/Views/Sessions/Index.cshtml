@@ -1,0 +1,35 @@
+﻿@using PrairieDevCon.WebSite.Extensions
+@using PrairieDevCon.WebSite.ViewModels
+
+@model PrairieDevCon.WebSite.ViewModels.SessionsViewModel
+
+@{
+    ViewBag.Title = "Sessions";
+}
+
+@functions {
+
+    string FormatTrackListingDisplayValue(TrackListingViewModel listing)
+    {
+        if (listing.NumberOfSessions < 0)
+        {
+            return listing.Name;
+        }
+
+        return String.Format("{0} ({1})", listing.Name, listing.NumberOfSessions);
+    }
+}
+
+@foreach (var session in Model.Sessions) { 	
+    <div style="margin-bottom:20px">
+        <h3><b>@session.Title</b></h3>
+        @session.Abstract<br/><br />
+        <b>Track:</b>@session.Track<br/>	
+        <b>Style:</b>@session.Style<br/>			        
+        <b>Speaker:</b> <i>@session.Presenter</i>
+    </div>
+}
+
+@section PageTail {
+    <script src="@Url.Content("~/Scripts/sessions.index.js")" type="text/javascript"></script>
+}

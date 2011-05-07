@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8E8B72D7-DE3F-4F28-8052-BEF7AB5E1E99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit", "Unit", "{E8C221DE-FA98-4A31-87DA-25881D9A25AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Acceptance", "Acceptance", "{86B28FB8-9006-4D99-B45A-6B228D9A73C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Global", "Global", "{6D099A96-5E17-4D22-ADE4-F0D5269488FD}"
+	ProjectSection(SolutionItems) = preProject
+		main\GlobalAssemblyInfo.cs = main\GlobalAssemblyInfo.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.PrDC.Demo", "main\MavenThought.PrDC.Demo\MavenThought.PrDC.Demo.csproj", "{FA8E5C4D-221C-4856-A7D9-1D8A25860A92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.PrDC.Api", "main\MavenThought.PrDC.Api\MavenThought.PrDC.Api.csproj", "{117BA193-118F-4FC8-930F-9CEAA14E74CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MavenThought.PrDC.Demo.Acceptance.Tests", "test\Acceptance\MavenThought.PrDC.Demo.Acceptance.Tests\MavenThought.PrDC.Demo.Acceptance.Tests.csproj", "{614C6A64-CD84-40A6-A8DE-CB835E8F02D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA8E5C4D-221C-4856-A7D9-1D8A25860A92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA8E5C4D-221C-4856-A7D9-1D8A25860A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA8E5C4D-221C-4856-A7D9-1D8A25860A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA8E5C4D-221C-4856-A7D9-1D8A25860A92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{117BA193-118F-4FC8-930F-9CEAA14E74CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{117BA193-118F-4FC8-930F-9CEAA14E74CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{117BA193-118F-4FC8-930F-9CEAA14E74CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{117BA193-118F-4FC8-930F-9CEAA14E74CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{614C6A64-CD84-40A6-A8DE-CB835E8F02D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{614C6A64-CD84-40A6-A8DE-CB835E8F02D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{614C6A64-CD84-40A6-A8DE-CB835E8F02D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{614C6A64-CD84-40A6-A8DE-CB835E8F02D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{86B28FB8-9006-4D99-B45A-6B228D9A73C5} = {8E8B72D7-DE3F-4F28-8052-BEF7AB5E1E99}
+		{E8C221DE-FA98-4A31-87DA-25881D9A25AB} = {8E8B72D7-DE3F-4F28-8052-BEF7AB5E1E99}
+		{614C6A64-CD84-40A6-A8DE-CB835E8F02D0} = {86B28FB8-9006-4D99-B45A-6B228D9A73C5}
+	EndGlobalSection
+EndGlobal
