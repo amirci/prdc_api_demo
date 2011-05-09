@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
-namespace MavenThought.PrDC.Demo.Extensions
+namespace MavenThought.PrDC.Demo.Helpers
 {
     public static class SelectListHelpers
     {

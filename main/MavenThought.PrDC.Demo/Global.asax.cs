@@ -4,7 +4,6 @@ using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using CommonServiceLocator.WindsorAdapter;
 using MavenThought.PrDC.Api;
-using MavenThought.PrDC.Demo.Controllers;
 using Microsoft.Practices.ServiceLocation;
 
 namespace MavenThought.PrDC.Demo
@@ -50,7 +49,7 @@ namespace MavenThought.PrDC.Demo
 
             container.Register(
                 Component.For<IControllerFactory>().ImplementedBy<WindsorControllerFactory>(),
-                Component.For<IConference>().ImplementedBy<PrarieDevConConference>(),
+                Component.For<IConference>().ImplementedBy<PrairieDevConConference>(),
                 AllTypes
                     .FromThisAssembly()
                     .BasedOn<Controller>()

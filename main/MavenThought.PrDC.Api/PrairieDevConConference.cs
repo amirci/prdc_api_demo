@@ -6,7 +6,7 @@ namespace MavenThought.PrDC.Api
     /// <summary>
     /// Repository to obtain data
     /// </summary>
-    public class PrarieDevConConference : IConference
+    public class PrairieDevConConference : IConference
     {
         /// <summary>
         /// Gets the presenters at the conference

@@ -75,12 +75,13 @@
     <Compile Include="..\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Helpers\SpeakersHelper.cs" />
     <Compile Include="WindsorControllerFactory.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\SessionsController.cs" />
     <Compile Include="Controllers\TracksController.cs" />
-    <Compile Include="Extensions\ControllerHelper.cs" />
-    <Compile Include="Extensions\SelectListHelpers.cs" />
+    <Compile Include="Helpers\ControllerHelper.cs" />
+    <Compile Include="Helpers\SelectListHelpers.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SpeakersController.cs" />
     <Compile Include="Global.asax.cs">
