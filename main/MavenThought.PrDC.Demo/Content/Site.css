@@ -60,25 +60,38 @@ body, html {
     padding:10px;
 }
 
-.element 
+.speaker 
 {
     background-color: rgb(232, 235, 239);
-    width:150px;
     border:1px solid #306bb1;
-    display:inline;
-    padding:0;
-    margin:0;
     border-spacing:0;
-}
-
-.element .title 
-{
-    color:rgb(39, 99, 165);
-    background-image: url(/Content/Images/box_head.gif);
-    border-bottom: 1px solid #306bb1;
     font-family: Verdana;
     font-size:10px;
+    margin-bottom:20px;
+}
+
+.speaker .title 
+{
+    color:rgb(39, 99, 165);
+    font-size:14px;
     font-weight:bold;
+    text-decoration:underline;
+    margin:5px;
+}
+
+.speaker .bio 
+{
+    margin: 10px;
+}
+
+.speaker .contact 
+{
+    margin: 10px;    
+}
+
+.speaker .contact a 
+{
+    margin-right:10px;
 }
 
 .element .image img {

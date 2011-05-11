@@ -77,9 +77,6 @@
     <Compile Include="RandomEntities.cs" />
     <Compile Include="PrairieDevConConferenceSpecification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="When_conference_lists_presenters.cs">
-      <DependentUpon>PrairieDevConConferenceSpecification.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\main\MavenThought.PrDC.Api\MavenThought.PrDC.Api.csproj">

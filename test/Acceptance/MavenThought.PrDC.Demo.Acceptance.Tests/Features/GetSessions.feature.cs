@@ -17,8 +17,8 @@ namespace MavenThought.PrDC.Demo.Acceptance.Tests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.3.5.2")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Getting sessions using REST API")]
-    public partial class GettingSessionsUsingRESTAPIFeature
+    [NUnit.Framework.DescriptionAttribute("List sessions using REST API")]
+    public partial class ListSessionsUsingRESTAPIFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -30,8 +30,7 @@ namespace MavenThought.PrDC.Demo.Acceptance.Tests.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Getting sessions using REST API", "As a REST API user\r\nI want to query the session list\r\nSo I can use the informatio" +
-                    "n", ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "List sessions using REST API", "As a user\r\nI want to query the sessions list", ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -54,60 +53,27 @@ namespace MavenThought.PrDC.Demo.Acceptance.Tests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Getting all the sessions in the conference")]
-        public virtual void GettingAllTheSessionsInTheConference()
+        [NUnit.Framework.DescriptionAttribute("List all the sessions")]
+        [NUnit.Framework.CategoryAttribute("sessions")]
+        public virtual void ListAllTheSessions()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Getting all the sessions in the conference", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("List all the sessions", new string[] {
+                        "sessions"});
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
-testRunner.Given("I have some sessions at the conference");
-#line 8
-testRunner.When("I get \"sessions\" as JSON");
-#line 9
-testRunner.Then("I should get a response with all the sessions");
-#line hidden
-            testRunner.CollectScenarioErrors();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Getting all the sessions for the Agile track")]
-        public virtual void GettingAllTheSessionsForTheAgileTrack()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Getting all the sessions for the Agile track", ((string[])(null)));
-#line 11
-this.ScenarioSetup(scenarioInfo);
-#line 12
-testRunner.Given("I have some sessions at the conference");
+testRunner.Given("I\'m on the \"sessions\" page");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Title",
-                        "Presenter"});
-            table1.AddRow(new string[] {
-                        "How agile is your Cat?",
-                        "Sir Elton Jhon"});
-            table1.AddRow(new string[] {
-                        "Agile pants",
                         "D\'Arcy Lussier"});
-#line 13
-testRunner.And("I have track \"Agile\" with sessions:", ((string)(null)), table1);
-#line 17
-testRunner.When("I get \"sessions/Agile\" as JSON");
-#line hidden
-            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Title",
-                        "Presenter",
-                        "Track"});
-            table2.AddRow(new string[] {
-                        "How agile is your Cat?",
-                        "Sir Elton Jhon",
-                        "Agile"});
-            table2.AddRow(new string[] {
-                        "Agile pants",
-                        "D\'Arcy Lussier",
-                        "Agile"});
-#line 18
-testRunner.Then("I should get a response with:", ((string)(null)), table2);
+            table1.AddRow(new string[] {
+                        "David Alpert"});
+            table1.AddRow(new string[] {
+                        "Amir Barylko"});
+            table1.AddRow(new string[] {
+                        "Donald Belcham"});
+#line 8
+testRunner.Then("I should see the following sessions:", ((string)(null)), table1);
 #line hidden
             testRunner.CollectScenarioErrors();
         }

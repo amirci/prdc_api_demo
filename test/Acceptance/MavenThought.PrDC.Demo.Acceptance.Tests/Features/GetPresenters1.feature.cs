@@ -70,6 +70,8 @@ testRunner.Given("I\'m on the \"speakers\" page");
                         "David Alpert"});
             table1.AddRow(new string[] {
                         "Amir Barylko"});
+            table1.AddRow(new string[] {
+                        "Donald Belcham"});
 #line 8
 testRunner.Then("I should see the following presenters:", ((string)(null)), table1);
 #line hidden

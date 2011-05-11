@@ -27,7 +27,7 @@ namespace MavenThought.PrDC.Api.Tests
         {
             Func<int, object> fn = RandomSession;
 
-            if (typeof(T) == typeof(Presenter))
+            if (typeof(T) == typeof(Speaker))
             {
                 fn = RandomPresenter;
             }
@@ -49,9 +49,9 @@ namespace MavenThought.PrDC.Api.Tests
             };
         }
 
-        private static Presenter RandomPresenter(int i)
+        private static Speaker RandomPresenter(int i)
         {
-            return new Presenter
+            return new Speaker
             {
                 Id = new DateTime().Millisecond,
                 Bio = "This is the bio for a random presenter",

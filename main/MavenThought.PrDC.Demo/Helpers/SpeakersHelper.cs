@@ -5,7 +5,7 @@ namespace MavenThought.PrDC.Demo.Helpers
 {
     public static class SpeakersHelper
     {
-        public static string DisplayInfo(this HtmlHelper helper, Presenter speaker)
+        public static string DisplayInfo(this HtmlHelper helper, Speaker speaker)
         {
             return string.Empty;
         }

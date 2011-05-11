@@ -1,6 +1,6 @@
 namespace MavenThought.PrDC.Api
 {
-    public class Presenter
+    public class Speaker
     {
         public int Id { get; set; }
 

@@ -23,9 +23,7 @@ namespace MavenThought.PrDC.Demo.Controllers
         // GET: /Speakers/
         public ActionResult Index()
         {
-            var presenters = conferenceRepo.Presenters;
-
-            return View(presenters);
+            return View(conferenceRepo.Speakers);
         }
     }
 }
