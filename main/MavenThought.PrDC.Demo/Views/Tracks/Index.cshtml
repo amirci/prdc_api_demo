@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MavenThought.PrDC.Api.ITrack>
+           
+@{
+    ViewBag.Title = "Tracks";
+}
+
+
+@foreach (var track in Model)
+{
+    <div class="element track">
+        <div class="title">@track.Name</div>
+        <div class="description">
+            <div class="total"><label>Number of Sessions</label>: @track.NumberOfSessions</div>
+        </div>
+    </div>
+    
+}

@@ -306,6 +306,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\imgs\post-conf-workshop2011.pdn" />
+    <Content Include="Views\Tracks\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\" />

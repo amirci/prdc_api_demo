@@ -7,7 +7,7 @@
 
 @foreach (var speaker in Model)
 {
-    <div class="speaker">
+    <div class="element speaker">
         <div class="title">@speaker.FirstName @speaker.LastName</div>
         <div class="location">@speaker.Location</div>
         <div class="bio">@Html.Raw(speaker.Bio)</div>

@@ -60,7 +60,7 @@ body, html {
     padding:10px;
 }
 
-.speaker 
+.element 
 {
     background-color: rgb(232, 235, 239);
     border:1px solid #306bb1;
@@ -70,13 +70,18 @@ body, html {
     margin-bottom:20px;
 }
 
-.speaker .title 
+.title 
 {
     color:rgb(39, 99, 165);
     font-size:14px;
     font-weight:bold;
     text-decoration:underline;
     margin:5px;
+}
+
+.speaker .location 
+{
+    margin: 10px;
 }
 
 .speaker .bio 
@@ -98,6 +103,10 @@ body, html {
     padding:5px;
 }
 
+.element .description 
+{
+    margin-right:10px;
+}
 
 /* Styles for basic forms
 -----------------------------------------------------------*/

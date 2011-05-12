@@ -30,8 +30,8 @@ namespace MavenThought.PrDC.Demo.Acceptance.Tests.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Getting Tracks using REST API", "As a REST API user\r\nI want to query the tracks list\r\nSo I can use the information" +
-                    "", ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Getting Tracks using REST API", "As a REST API user\r\nI want to query the tracks list\r\nSo I see the sessions per tr" +
+                    "ack", ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -60,80 +60,43 @@ namespace MavenThought.PrDC.Demo.Acceptance.Tests.Features
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get tracks list", ((string[])(null)));
 #line 6
 this.ScenarioSetup(scenarioInfo);
+#line 7
+testRunner.Given("I\'m on the \"tracks\" page");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "title",
-                        "tracks"});
-            table1.AddRow(new string[] {
-                        "Some Ms..",
-                        "Microsoft, SharePoint, SQL Server"});
-            table1.AddRow(new string[] {
-                        "Phone me",
-                        "WP7, Mobile, Android"});
-            table1.AddRow(new string[] {
-                        "The GWT",
-                        "Java, Web"});
-            table1.AddRow(new string[] {
-                        "Capybara",
-                        "Ruby, Web, Agile, User Experience"});
-            table1.AddRow(new string[] {
-                        "TDD",
-                        "Ruby, Developer Foundation"});
-            table1.AddRow(new string[] {
-                        "The Office",
-                        "Office, Security, Web"});
-#line 7
-testRunner.Given("I have the following sessions with tracks:", ((string)(null)), table1);
-#line 15
-testRunner.When("I get \"tracks\" as JSON");
-#line hidden
-            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "track",
-                        "count"});
-            table2.AddRow(new string[] {
-                        "Microsoft",
-                        "1"});
-            table2.AddRow(new string[] {
+                        "count",
+                        "sessions"});
+            table1.AddRow(new string[] {
                         "SharePoint",
-                        "1"});
-            table2.AddRow(new string[] {
-                        "SQL Server",
-                        "1"});
-            table2.AddRow(new string[] {
+                        "1",
+                        "Ms a"});
+            table1.AddRow(new string[] {
                         "WP7",
-                        "1"});
-            table2.AddRow(new string[] {
+                        "1",
+                        "Ms a"});
+            table1.AddRow(new string[] {
                         "Mobile",
-                        "1"});
-            table2.AddRow(new string[] {
+                        "1",
+                        "Ms a"});
+            table1.AddRow(new string[] {
                         "Android",
-                        "1"});
-            table2.AddRow(new string[] {
+                        "1",
+                        "Ms a"});
+            table1.AddRow(new string[] {
                         "Java",
-                        "1"});
-            table2.AddRow(new string[] {
-                        "Web",
-                        "3"});
-            table2.AddRow(new string[] {
+                        "1",
+                        "Ms a"});
+            table1.AddRow(new string[] {
                         "Ruby",
-                        "2"});
-            table2.AddRow(new string[] {
+                        "2",
+                        "Ms a"});
+            table1.AddRow(new string[] {
                         "Agile",
-                        "1"});
-            table2.AddRow(new string[] {
-                        "Office",
-                        "1"});
-            table2.AddRow(new string[] {
-                        "Security",
-                        "1"});
-            table2.AddRow(new string[] {
-                        "User Experience",
-                        "1"});
-            table2.AddRow(new string[] {
-                        "Developer Foundation",
-                        "1"});
-#line 16
-testRunner.Then("I should get a response with tracks:", ((string)(null)), table2);
+                        "1",
+                        "Ms a"});
+#line 8
+testRunner.Then("I should see the following tracks with sessions", ((string)(null)), table1);
 #line hidden
             testRunner.CollectScenarioErrors();
         }
