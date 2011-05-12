@@ -10,6 +10,11 @@ namespace MavenThought.PrDC.Demo.Tests.Controllers
         : AutoMockSpecificationWithNoContract<T> where T : class
     {
         /// <summary>
+        /// Sessions to be expected
+        /// </summary>
+        protected TModel Expected { get; set; }
+
+        /// <summary>
         /// Actual result obtained 
         /// </summary>
         protected ActionResult ActualResult { get; set; }

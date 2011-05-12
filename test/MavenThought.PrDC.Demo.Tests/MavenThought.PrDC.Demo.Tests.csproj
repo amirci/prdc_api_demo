@@ -80,9 +80,11 @@
   <ItemGroup>
     <Compile Include="Controllers\BaseControllerSpecification.cs" />
     <Compile Include="Controllers\SessionsControllerSpecification.cs" />
+    <Compile Include="Controllers\SpeakersControllerSpecification.cs" />
     <Compile Include="Controllers\When_sessions_controller_calls_index.cs">
-      <DependentUpon>BaseControllerSpecification.cs</DependentUpon>
+      <DependentUpon>SessionsControllerSpecification.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\When_speakers_controller_calls_index.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
