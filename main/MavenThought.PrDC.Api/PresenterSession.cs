@@ -1,6 +1,9 @@
 ﻿namespace MavenThought.PrDC.Api
 {
-    public class PresenterSession
+    /// <summary>
+    /// Base implementation for a presenter session
+    /// </summary>
+    public class PresenterSession : IPresenterSession
     {
         public int Id { get; set; }
 

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using EasyHttp.Http;
 
@@ -27,13 +26,14 @@ namespace MavenThought.PrDC.Api
         public PrairieDevConConference()
         {
             _httpClient = new HttpClient();
+
             _httpClient.Request.Accept = HttpContentTypes.ApplicationJson;
         }
 
         /// <summary>
         /// Gets the presenters at the conference
         /// </summary>
-        public IEnumerable<Speaker> Speakers
+        public IEnumerable<ISpeaker> Speakers
         {
             get { return Get<Speaker>(); }
         }
@@ -41,17 +41,17 @@ namespace MavenThought.PrDC.Api
         /// <summary>
         /// Gets all the sessions in the conference
         /// </summary>
-        public IEnumerable<PresenterSession> Sessions
+        public IEnumerable<IPresenterSession> Sessions
         {
-            get { return Enumerable.Empty<PresenterSession>(); }
+            get { return Get<PresenterSession>(); }
         }
 
         /// <summary>
         /// Gets all the tracks in the conference
         /// </summary>
-        public IEnumerable<Track> Tracks
+        public IEnumerable<ITrack> Tracks
         {
-            get { return  Enumerable.Empty<Track>(); }
+            get { return Get<Track>(); }
         }
 
         /// <summary>

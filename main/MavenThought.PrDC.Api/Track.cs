@@ -1,6 +1,9 @@
 namespace MavenThought.PrDC.Api
 {
-    public class Track
+    /// <summary>
+    /// Base implementation for track
+    /// </summary>
+    public class Track : ITrack
     {
         private string _name;
 

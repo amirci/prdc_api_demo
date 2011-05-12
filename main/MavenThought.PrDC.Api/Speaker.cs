@@ -1,6 +1,9 @@
 namespace MavenThought.PrDC.Api
 {
-    public class Speaker
+    /// <summary>
+    /// Base implementation of speakers
+    /// </summary>
+    public class Speaker : ISpeaker
     {
         public int Id { get; set; }
 

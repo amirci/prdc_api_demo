@@ -11,7 +11,7 @@ namespace MavenThought.PrDC.Demo.Controllers
         /// <summary>
         /// Repository to find the sessions
         /// </summary>
-        private readonly IConference repository;
+        private readonly IConference _conference;
 
         /// <summary>
         /// Initializes a new instance of the SessionsController class.
@@ -19,14 +19,14 @@ namespace MavenThought.PrDC.Demo.Controllers
         /// <param name="conferenceRepo"></param>
         public SessionsController(IConference conferenceRepo)
         {
-            this.repository = conferenceRepo;
+            this._conference = conferenceRepo;
         }
 
         //
         // GET: /Sessions/
-        public ActionResult Index(string track)
+        public ActionResult Index()
         {
-            return View();
+            return View(this._conference.Sessions);
         }
     }
 }

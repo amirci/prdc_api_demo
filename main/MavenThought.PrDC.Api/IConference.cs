@@ -10,16 +10,16 @@ namespace MavenThought.PrDC.Api
         /// <summary>
         /// Gets the presenters at the conference
         /// </summary>
-        IEnumerable<Speaker> Speakers { get; }
+        IEnumerable<ISpeaker> Speakers { get; }
         
         /// <summary>
         /// Gets all the sessions in the conference
         /// </summary>
-        IEnumerable<PresenterSession> Sessions { get; }
+        IEnumerable<IPresenterSession> Sessions { get; }
 
         /// <summary>
         /// Gets all the tracks in the conference
         /// </summary>
-        IEnumerable<Track> Tracks { get; }
+        IEnumerable<ITrack> Tracks { get; }
     }
 }

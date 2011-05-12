@@ -52,7 +52,10 @@
     <Compile Include="..\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="IPresenterSession.cs" />
     <Compile Include="IRestClient.cs" />
+    <Compile Include="ISpeaker.cs" />
+    <Compile Include="ITrack.cs" />
     <Compile Include="PrairieDevConConference.cs" />
     <Compile Include="IConference.cs" />
     <Compile Include="Speaker.cs" />
