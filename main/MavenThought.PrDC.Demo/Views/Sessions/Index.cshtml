@@ -1,11 +1,11 @@
-﻿@model MavenThought.PrDC.Api.Session
+﻿@model IEnumerable<MavenThought.PrDC.Api.ISession>
 
 @{
     ViewBag.Title = "Sessions";
 }
 
 
-@foreach (var session in Model.Sessions) { 	
+@foreach (var session in Model) { 	
     <div class="session">
         <p class="title">@session.Title</p>
         <p>@session.Abstract</p>

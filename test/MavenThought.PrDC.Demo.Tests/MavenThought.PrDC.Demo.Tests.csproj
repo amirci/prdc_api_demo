@@ -84,7 +84,9 @@
     <Compile Include="Controllers\When_sessions_controller_calls_index.cs">
       <DependentUpon>SessionsControllerSpecification.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\When_speakers_controller_calls_index.cs" />
+    <Compile Include="Controllers\When_speakers_controller_calls_index.cs">
+      <DependentUpon>SpeakersControllerSpecification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

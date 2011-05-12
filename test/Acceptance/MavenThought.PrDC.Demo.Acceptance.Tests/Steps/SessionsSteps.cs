@@ -13,7 +13,7 @@ namespace MavenThought.PrDC.Demo.Acceptance.Tests.Steps
         [Then(@"I should see the following sessions:")]
         public void ShouldHaveSessions(Table table)
         {
-            var sessions = this.Browser.Instance.Elements.Filter(Find.ByClass(".sessions.title"));
+            var sessions = this.Browser.Instance.Elements.Filter(Find.ByClass(".session.title"));
 
             var names = sessions.Select(s => s.Text).ToList();
 
