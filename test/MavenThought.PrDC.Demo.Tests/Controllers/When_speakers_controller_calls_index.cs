@@ -4,6 +4,7 @@ using MavenThought.PrDC.Api;
 using MvcContrib.TestHelper;
 using Rhino.Mocks;
 using MavenThought.Commons.Testing;
+using SharpTestsEx;
 
 namespace MavenThought.PrDC.Demo.Tests.Controllers
 {
@@ -20,6 +21,7 @@ namespace MavenThought.PrDC.Demo.Tests.Controllers
         [It]
         public void Should_return_all_the_speakers()
         {
+            this.Model.Should().Have.SameValuesAs(this.Expected);
         }
 
         /// <summary>
