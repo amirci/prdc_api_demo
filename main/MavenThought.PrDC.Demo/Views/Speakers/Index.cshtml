@@ -8,7 +8,8 @@
 @foreach (var speaker in Model)
 {
     <div class="speaker">
-        <div class="title">@speaker.FirstName @speaker.LastName, @speaker.Location</div>
+        <div class="title">@speaker.FirstName @speaker.LastName</div>
+        <div class="location">@speaker.Location</div>
         <div class="bio">@Html.Raw(speaker.Bio)</div>
         <div class="contact">
             @if (speaker.Email != string.Empty)
@@ -23,7 +24,7 @@
                                 
             @if (speaker.WebSite != string.Empty)
             {
-  		        <a href="http://@speaker.WebSite" target="_blank">***@speaker.WebSite--- Website</a>
+  		        <a href="http://@speaker.WebSite" target="_blank">Website</a>
             }
 
             @if (speaker.Twitter != string.Empty)
