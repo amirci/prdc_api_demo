@@ -6,10 +6,10 @@
 Scenario: List all the sessions
 	Given I'm on the "sessions" page
 	Then  I should see the following sessions:
-			| D'Arcy Lussier |
-			| David Alpert   |
-			| Amir Barylko   |
-			| Donald Belcham |
+			| Self Organizing Teams    |
+			| A Dash of Kanban Anyone? |
+			| Want Better Estimates? Stop Estimating!  |
+			| Agile Fishbowl |
 
 
 

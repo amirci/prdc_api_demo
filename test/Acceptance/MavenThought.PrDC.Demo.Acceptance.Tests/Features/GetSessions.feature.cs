@@ -65,13 +65,13 @@ this.ScenarioSetup(scenarioInfo);
 testRunner.Given("I\'m on the \"sessions\" page");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "D\'Arcy Lussier"});
+                        "Self Organizing Teams"});
             table1.AddRow(new string[] {
-                        "David Alpert"});
+                        "A Dash of Kanban Anyone?"});
             table1.AddRow(new string[] {
-                        "Amir Barylko"});
+                        "Want Better Estimates? Stop Estimating!"});
             table1.AddRow(new string[] {
-                        "Donald Belcham"});
+                        "Agile Fishbowl"});
 #line 8
 testRunner.Then("I should see the following sessions:", ((string)(null)), table1);
 #line hidden

@@ -61,7 +61,15 @@ namespace MavenThought.PrDC.Api
         /// <returns>A collection of instances of the resource</returns>
         private IEnumerable<T> Get<T>()
         {
-            var formatted = string.Format("{0}/{1}s", ConferenceURL, typeof(T).Name);
+            var nameMap = new Dictionary<Type, string>
+                              {
+                                  {typeof (PresenterSession), "Session"}
+                              };
+
+
+            var typeName = nameMap.ContainsKey(typeof(T)) ? nameMap[typeof(T)] : typeof(T).Name;
+
+            var formatted = string.Format("{0}/{1}s", ConferenceURL, typeName);
 
             var response = this._httpClient.Get(formatted);
 
