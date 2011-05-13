@@ -65,36 +65,28 @@ testRunner.Given("I\'m on the \"tracks\" page");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "track",
-                        "count",
-                        "sessions"});
+                        "count"});
             table1.AddRow(new string[] {
                         "SharePoint",
-                        "1",
-                        "Ms a"});
+                        "3"});
             table1.AddRow(new string[] {
                         "WP7",
-                        "1",
-                        "Ms a"});
+                        "3"});
             table1.AddRow(new string[] {
                         "Mobile",
-                        "1",
-                        "Ms a"});
+                        "7"});
             table1.AddRow(new string[] {
                         "Android",
-                        "1",
-                        "Ms a"});
+                        "3"});
             table1.AddRow(new string[] {
                         "Java",
-                        "1",
-                        "Ms a"});
+                        "7"});
             table1.AddRow(new string[] {
                         "Ruby",
-                        "2",
-                        "Ms a"});
+                        "1"});
             table1.AddRow(new string[] {
                         "Agile",
-                        "1",
-                        "Ms a"});
+                        "7"});
 #line 8
 testRunner.Then("I should see the following tracks with sessions", ((string)(null)), table1);
 #line hidden
