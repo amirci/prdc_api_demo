@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using MavenThought.Commons.Extensions;
 using NUnit.Framework;
@@ -21,18 +20,16 @@ namespace MavenThought.PrDC.Demo.Acceptance.Tests.Steps
                 .Instance
                 .Elements
                 .Filter(Find.BySelector(".track"))
-                .Select(e => e.Text);
+                .Select(e => e.Text.Trim());
 
             table.Rows.ForEach(row => HasMatchingTrack(row, tracks));
         }
 
         private static void HasMatchingTrack(TableRow row, IEnumerable<string> tracks)
         {
-            var found = tracks.Find(e => e.Contains(row["track"]));
+            var expected = string.Format("{0}: {1}",row["track"], row["count"]);
 
-            Assert.IsNotNull(found, "Can't find track {0} with count {1}", row["track"], row["count"]);
-
-            found.Should().Contain(string.Format("Number of Sessions: {0}",row["count"]));
+            tracks.Should().Contain(expected);
         }
     }
 }

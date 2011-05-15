@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PrairieDevCon.Website.Tests")]
+[assembly: AssemblyTitle("MavenThought.PrDC.Demo.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PrairieDevCon.Website.Tests")]
+[assembly: AssemblyProduct("MavenThought.PrDC.Demo.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("25926584-2010-45a4-a5d8-8feeadd4a0c7")]
+[assembly: Guid("0da4db54-0736-4c97-926b-45c0dee14a83")]
 
 // Version information for an assembly consists of the following four values:
 //

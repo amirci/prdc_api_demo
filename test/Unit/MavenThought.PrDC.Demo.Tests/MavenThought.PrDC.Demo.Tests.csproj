@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{35926DBF-CC95-4677-9967-9EDA0691BEC9}</ProjectGuid>
+    <ProjectGuid>{79ACD1BA-E80B-43DF-9B48-707393DB11BD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PrairieDevCon.Website.Tests</RootNamespace>
-    <AssemblyName>PrairieDevCon.Website.Tests</AssemblyName>
+    <RootNamespace>MavenThought.PrDC.Demo.Tests</RootNamespace>
+    <AssemblyName>MavenThought.PrDC.Demo.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,53 +32,44 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Castle.Core">
-      <HintPath>..\..\..\packages\Castle.Core.2.5.2\lib\NET35\Castle.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="EasyHttp">
-      <HintPath>..\..\..\packages\EasyHttp.1.0.1\lib\EasyHttp.dll</HintPath>
+      <HintPath>..\..\packages\Castle.Core.2.5.2\lib\NET35\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="MavenThought.Commons">
-      <HintPath>..\..\..\packages\maventhought.commons.0.9.4\lib\MavenThought.Commons.dll</HintPath>
+      <HintPath>..\..\packages\maventhought.commons.0.9.4\lib\MavenThought.Commons.dll</HintPath>
     </Reference>
     <Reference Include="MavenThought.Commons.Testing.NUnit">
-      <HintPath>..\..\..\packages\maventhought.testing.nunit.0.3.3\lib\MavenThought.Commons.Testing.NUnit.dll</HintPath>
+      <HintPath>..\..\packages\maventhought.testing.nunit.0.3.3\lib\MavenThought.Commons.Testing.NUnit.dll</HintPath>
     </Reference>
     <Reference Include="MavenThought.Commons.WPF">
-      <HintPath>..\..\..\packages\maventhought.commons.0.9.4\lib\MavenThought.Commons.WPF.dll</HintPath>
+      <HintPath>..\..\packages\maventhought.commons.0.9.4\lib\MavenThought.Commons.WPF.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>..\..\..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <HintPath>..\..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
     </Reference>
     <Reference Include="MvcContrib.TestHelper">
-      <HintPath>..\..\..\packages\MvcContrib.Mvc3.TestHelper-ci.3.0.67.0\lib\MvcContrib.TestHelper.dll</HintPath>
+      <HintPath>..\..\packages\MvcContrib.Mvc3.TestHelper-ci.3.0.68.0\lib\MvcContrib.TestHelper.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\..\..\packages\NUnit.2.5.9.10348\lib\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.mocks">
-      <HintPath>..\..\..\packages\NUnit.2.5.9.10348\lib\nunit.mocks.dll</HintPath>
-    </Reference>
-    <Reference Include="pnunit.framework">
-      <HintPath>..\..\..\packages\NUnit.2.5.9.10348\lib\pnunit.framework.dll</HintPath>
+    <Reference Include="nunit.framework, Version=2.5.9.10348, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Packages\NUnit.2.5.9.10348\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Rhino.Mocks">
-      <HintPath>..\..\..\packages\RhinoMocks.3.6\lib\Rhino.Mocks.dll</HintPath>
+      <HintPath>..\..\packages\RhinoMocks.3.6\lib\Rhino.Mocks.dll</HintPath>
     </Reference>
     <Reference Include="SharpTestsEx">
-      <HintPath>..\..\..\packages\SharpTestsEx.1.1.1\lib\SharpTestsEx.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpTestsEx.Mvc">
-      <HintPath>..\..\..\packages\SharpTestsEx.1.1.1\lib\SharpTestsEx.Mvc.dll</HintPath>
+      <HintPath>..\..\packages\SharpTestsEx.1.1.1\lib\SharpTestsEx.dll</HintPath>
     </Reference>
     <Reference Include="StructureMap">
-      <HintPath>..\..\..\packages\structuremap.2.6.2\lib\StructureMap.dll</HintPath>
+      <HintPath>..\..\packages\structuremap.2.6.2\lib\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="StructureMap.AutoMocking">
-      <HintPath>..\..\..\packages\structuremap.automocking.2.6.2.0\lib\StructureMap.AutoMocking.dll</HintPath>
+      <HintPath>..\..\packages\structuremap.automocking.2.6.2.0\lib\StructureMap.AutoMocking.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -87,33 +78,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\ControllerSpecification.cs" />
+    <Compile Include="Controllers\BaseControllerSpecification.cs" />
     <Compile Include="Controllers\SessionsControllerSpecification.cs" />
     <Compile Include="Controllers\SpeakersControllerSpecification.cs" />
     <Compile Include="Controllers\TracksControllerSpecification.cs" />
-    <Compile Include="Controllers\When_speakers_controller_receives_index_with_json_content_type.cs">
-      <DependentUpon>SpeakersControllerSpecification.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\When_sessions_controller_receives_index_with_json_content_type.cs">
+    <Compile Include="Controllers\When_sessions_controller_calls_index.cs">
       <DependentUpon>SessionsControllerSpecification.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\When_tracks_controller_gets_all_tracks.cs">
+    <Compile Include="Controllers\When_speakers_controller_calls_index.cs">
+      <DependentUpon>SpeakersControllerSpecification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\When_tracks_controller_calls_index.cs">
       <DependentUpon>TracksControllerSpecification.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\main\PrairieDevCon.Core\PrairieDevCon.Core.csproj">
+    <ProjectReference Include="..\..\..\main\MavenThought.PrDC.Api\MavenThought.PrDC.Api.csproj">
       <Project>{117BA193-118F-4FC8-930F-9CEAA14E74CE}</Project>
-      <Name>PrairieDevCon.Core</Name>
+      <Name>MavenThought.PrDC.Api</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\main\PrairieDevCon.WebSite\PrairieDevCon.WebSite.csproj">
+    <ProjectReference Include="..\..\..\main\MavenThought.PrDC.Demo\MavenThought.PrDC.Demo.csproj">
       <Project>{FA8E5C4D-221C-4856-A7D9-1D8A25860A92}</Project>
-      <Name>PrairieDevCon.WebSite</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\PrairieDevCon.Testing.Infrastructure\PrairieDevCon.Testing.Infrastructure.csproj">
-      <Project>{1DA794C5-2CBD-4447-AF2E-557C32DC3788}</Project>
-      <Name>PrairieDevCon.Testing.Infrastructure</Name>
+      <Name>MavenThought.PrDC.Demo</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

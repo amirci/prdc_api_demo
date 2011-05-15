@@ -1,7 +1,5 @@
-﻿using System.Linq;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using MavenThought.PrDC.Api;
-using MavenThought.PrDC.Demo.Models;
 
 namespace MavenThought.PrDC.Demo.Controllers
 {
@@ -25,15 +23,7 @@ namespace MavenThought.PrDC.Demo.Controllers
         // GET: /Tracks/
         public ActionResult Index()
         {
-            var tracks = this._conference.Tracks
-                .Select(t => new TrackViewModel
-                                 {
-                                     Track = t,
-                                     Sessions = this._conference.SessionsForTrack(t)
-                                 })
-                .ToList();
-
-            return View(tracks);
+            return View(this._conference.Tracks);
         }
     }
 }

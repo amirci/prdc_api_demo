@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{79ACD1BA-E80B-43DF-9B48-707393DB11BD}</ProjectGuid>
+    <ProjectGuid>{66E5FCAB-1130-4B83-9251-F89917F23DC8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MavenThought.PrDC.Demo.Tests</RootNamespace>
-    <AssemblyName>MavenThought.PrDC.Demo.Tests</AssemblyName>
+    <RootNamespace>MavenThought.PrDC.Api.Tests</RootNamespace>
+    <AssemblyName>MavenThought.PrDC.Api.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -46,12 +46,6 @@
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
-    <Reference Include="Moq">
-      <HintPath>..\..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
-    </Reference>
-    <Reference Include="MvcContrib.TestHelper">
-      <HintPath>..\..\packages\MvcContrib.Mvc3.TestHelper-ci.3.0.68.0\lib\MvcContrib.TestHelper.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework, Version=2.5.9.10348, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Packages\NUnit.2.5.9.10348\lib\nunit.framework.dll</HintPath>
@@ -62,6 +56,9 @@
     <Reference Include="SharpTestsEx">
       <HintPath>..\..\packages\SharpTestsEx.1.1.1\lib\SharpTestsEx.dll</HintPath>
     </Reference>
+    <Reference Include="SharpTestsEx.Mvc">
+      <HintPath>..\..\packages\SharpTestsEx.1.1.1\lib\SharpTestsEx.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap">
       <HintPath>..\..\packages\structuremap.2.6.2\lib\StructureMap.dll</HintPath>
     </Reference>
@@ -70,7 +67,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -78,29 +74,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\BaseControllerSpecification.cs" />
-    <Compile Include="Controllers\SessionsControllerSpecification.cs" />
-    <Compile Include="Controllers\SpeakersControllerSpecification.cs" />
-    <Compile Include="Controllers\TracksControllerSpecification.cs" />
-    <Compile Include="Controllers\When_sessions_controller_calls_index.cs">
-      <DependentUpon>SessionsControllerSpecification.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\When_speakers_controller_calls_index.cs">
-      <DependentUpon>SpeakersControllerSpecification.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controllers\When_tracks_controller_calls_index.cs">
-      <DependentUpon>TracksControllerSpecification.cs</DependentUpon>
-    </Compile>
+    <Compile Include="RandomEntities.cs" />
+    <Compile Include="PrairieDevConConferenceSpecification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\main\MavenThought.PrDC.Api\MavenThought.PrDC.Api.csproj">
+    <ProjectReference Include="..\..\..\main\MavenThought.PrDC.Api\MavenThought.PrDC.Api.csproj">
       <Project>{117BA193-118F-4FC8-930F-9CEAA14E74CE}</Project>
       <Name>MavenThought.PrDC.Api</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\main\MavenThought.PrDC.Demo\MavenThought.PrDC.Demo.csproj">
-      <Project>{FA8E5C4D-221C-4856-A7D9-1D8A25860A92}</Project>
-      <Name>MavenThought.PrDC.Demo</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

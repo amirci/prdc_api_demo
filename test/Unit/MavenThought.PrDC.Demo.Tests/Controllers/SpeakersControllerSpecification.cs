@@ -1,12 +1,12 @@
-using PrairieDevCon.WebSite.Controllers;
+using MavenThought.PrDC.Demo.Controllers;
 
-namespace PrairieDevCon.Website.Tests.Controllers
+namespace MavenThought.PrDC.Demo.Tests.Controllers
 {
     /// <summary>
     /// Base specification for SpeakersController
     /// </summary>
-    public abstract class SpeakersControllerSpecification 
-        : ControllerSpecification<SpeakersController>
+    public abstract class SpeakersControllerSpecification<TModel>
+        : BaseControllerSpecification<SpeakersController, TModel>
     {
     }
 }

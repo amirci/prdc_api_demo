@@ -1,12 +1,8 @@
-using PrairieDevCon.WebSite.Controllers;
+﻿using MavenThought.PrDC.Demo.Controllers;
 
-namespace PrairieDevCon.Website.Tests.Controllers
+namespace MavenThought.PrDC.Demo.Tests.Controllers
 {
-    /// <summary>
-    /// Base specification for session conroller 
-    /// </summary>
-    public abstract class SessionsControllerSpecification
-        : ControllerSpecification<SessionsController>
-    {
-    }
+    public abstract class SessionsControllerSpecification<TModel>
+        : BaseControllerSpecification<SessionsController, TModel>
+    {}
 }

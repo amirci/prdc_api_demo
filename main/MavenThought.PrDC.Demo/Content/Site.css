@@ -108,6 +108,11 @@ body, html {
     margin-right:10px;
 }
 
+.track .description 
+{
+    margin-left:10px;
+}
+
 /* Styles for basic forms
 -----------------------------------------------------------*/
 
