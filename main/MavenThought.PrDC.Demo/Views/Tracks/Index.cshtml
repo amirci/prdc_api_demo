@@ -1,16 +1,21 @@
-﻿@model IEnumerable<MavenThought.PrDC.Api.ITrack>
+﻿@model IEnumerable<MavenThought.PrDC.Demo.Models.TrackViewModel>
            
 @{
     ViewBag.Title = "Tracks";
 }
 
 
-@foreach (var track in Model)
+@foreach (var vm in Model)
 {
     <div class="element track">
-        <div class="title">@track.Name</div>
+        <div class="title">@vm.Track.Name</div>
         <div class="description">
-            <div class="total"><label>Number of Sessions</label>: @track.NumberOfSessions</div>
+            <div class="total"><label>Number of Sessions</label>: @vm.Track.NumberOfSessions</div>
+            <ul class="sessions">
+                @foreach(var session in vm.Sessions) {
+                    <li>@session.Title</li>
+                }
+            </ul>
         </div>
     </div>
     

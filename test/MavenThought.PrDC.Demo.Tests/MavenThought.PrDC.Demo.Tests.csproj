@@ -81,11 +81,15 @@
     <Compile Include="Controllers\BaseControllerSpecification.cs" />
     <Compile Include="Controllers\SessionsControllerSpecification.cs" />
     <Compile Include="Controllers\SpeakersControllerSpecification.cs" />
+    <Compile Include="Controllers\TracksControllerSpecification.cs" />
     <Compile Include="Controllers\When_sessions_controller_calls_index.cs">
       <DependentUpon>SessionsControllerSpecification.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\When_speakers_controller_calls_index.cs">
       <DependentUpon>SpeakersControllerSpecification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\When_tracks_controller_calls_index.cs">
+      <DependentUpon>TracksControllerSpecification.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

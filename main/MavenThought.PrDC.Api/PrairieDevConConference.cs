@@ -55,6 +55,18 @@ namespace MavenThought.PrDC.Api
         }
 
         /// <summary>
+        /// Gets all the sessions in that track
+        /// </summary>
+        /// <param name="track">Track to use</param>
+        /// <returns>All the sessions in the track</returns>
+        public IEnumerable<IPresenterSession> SessionsForTrack(ITrack track)
+        {
+            var formatted = string.Format("{0}/{1}s/{2}", ConferenceURL, "Session", track.Name);
+
+            return GetUrl<PresenterSession>(formatted);
+        }
+
+        /// <summary>
         /// Gets the a collection of resources by type
         /// </summary>
         /// <typeparam name="T">Type of the resource</typeparam>
@@ -71,6 +83,17 @@ namespace MavenThought.PrDC.Api
 
             var formatted = string.Format("{0}/{1}s", ConferenceURL, typeName);
 
+            return GetUrl<T>(formatted);
+        }
+
+        /// <summary>
+        /// Gets the resources associated to the URL
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="formatted"></param>
+        /// <returns></returns>
+        private IEnumerable<T> GetUrl<T>(string formatted)
+        {
             var response = this._httpClient.Get(formatted);
 
             if (response.StatusCode != HttpStatusCode.OK)

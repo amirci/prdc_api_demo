@@ -1,5 +1,7 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using MavenThought.PrDC.Api;
+using MavenThought.PrDC.Demo.Models;
 
 namespace MavenThought.PrDC.Demo.Controllers
 {
@@ -13,7 +15,7 @@ namespace MavenThought.PrDC.Demo.Controllers
         /// <summary>
         /// Initializes a new instance of the SessionsController class.
         /// </summary>
-        /// <param name="conferenceRepo"></param>
+        /// <param name="conferenceRepo">Conference repository to use</param>
         public TracksController(IConference conferenceRepo)
         {
             this._conference = conferenceRepo;
@@ -23,8 +25,15 @@ namespace MavenThought.PrDC.Demo.Controllers
         // GET: /Tracks/
         public ActionResult Index()
         {
-            return View(this._conference.Tracks);
-        }
+            var tracks = this._conference.Tracks
+                .Select(t => new TrackViewModel
+                                 {
+                                     Track = t,
+                                     Sessions = this._conference.SessionsForTrack(t)
+                                 })
+                .ToList();
 
+            return View(tracks);
+        }
     }
 }

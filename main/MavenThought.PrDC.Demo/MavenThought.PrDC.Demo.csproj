@@ -76,6 +76,7 @@
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Helpers\SpeakersHelper.cs" />
+    <Compile Include="Models\TrackViewModel.cs" />
     <Compile Include="WindsorControllerFactory.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\SessionsController.cs" />
@@ -310,7 +311,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MavenThought.PrDC.Api\MavenThought.PrDC.Api.csproj">
