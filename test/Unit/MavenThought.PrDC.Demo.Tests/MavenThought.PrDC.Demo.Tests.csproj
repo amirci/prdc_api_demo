@@ -91,6 +91,9 @@
     <Compile Include="Controllers\When_tracks_controller_calls_index.cs">
       <DependentUpon>TracksControllerSpecification.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\When_tracks_controller_calls_details.cs">
+      <DependentUpon>TracksControllerSpecification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

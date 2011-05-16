@@ -59,9 +59,9 @@ namespace MavenThought.PrDC.Api
         /// </summary>
         /// <param name="track">Track to use</param>
         /// <returns>All the sessions in the track</returns>
-        public IEnumerable<IPresenterSession> SessionsForTrack(ITrack track)
+        public IEnumerable<IPresenterSession> SessionsForTrack(string track)
         {
-            var formatted = string.Format("{0}/{1}s/{2}", ConferenceURL, "Session", track.Name);
+            var formatted = string.Format("{0}/{1}s/{2}", ConferenceURL, "Session", track);
 
             return GetUrl<PresenterSession>(formatted);
         }

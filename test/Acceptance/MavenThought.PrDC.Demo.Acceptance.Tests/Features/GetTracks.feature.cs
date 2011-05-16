@@ -92,6 +92,23 @@ testRunner.Then("I should see the following tracks with sessions", ((string)(nul
 #line hidden
             testRunner.CollectScenarioErrors();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Get track sessions")]
+        public virtual void GetTrackSessions()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get track sessions", ((string[])(null)));
+#line 18
+this.ScenarioSetup(scenarioInfo);
+#line 19
+testRunner.Given("I\'m on the \"tracks\" page");
+#line 20
+testRunner.When("I follow \"1\"");
+#line 21
+testRunner.Then("I should see \"Jruby\"");
+#line hidden
+            testRunner.CollectScenarioErrors();
+        }
     }
 }
 #endregion

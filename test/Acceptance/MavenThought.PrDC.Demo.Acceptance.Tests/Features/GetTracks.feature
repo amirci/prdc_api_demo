@@ -14,3 +14,8 @@ Scenario: Get tracks list
 			| Java		 		   | 7	   | 
 			| Ruby		 		   | 1	   | 
 			| Agile		 		   | 7	   | 
+
+Scenario: Get track sessions
+	Given I'm on the "tracks" page
+	When  I follow "1"
+	Then  I should see "Jruby"

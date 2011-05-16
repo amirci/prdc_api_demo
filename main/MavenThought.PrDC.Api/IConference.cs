@@ -27,6 +27,6 @@ namespace MavenThought.PrDC.Api
         /// </summary>
         /// <param name="track">Track to use</param>
         /// <returns>All the sessions in the track</returns>
-        IEnumerable<IPresenterSession> SessionsForTrack(ITrack track);
+        IEnumerable<IPresenterSession> SessionsForTrack(string track);
     }
 }

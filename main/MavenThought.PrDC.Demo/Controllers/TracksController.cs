@@ -25,5 +25,11 @@ namespace MavenThought.PrDC.Demo.Controllers
         {
             return View(this._conference.Tracks);
         }
+
+        // Get: /Tracks/Detail
+        public ActionResult Detail(string track)
+        {
+            return View(this._conference.SessionsForTrack(track));
+        }
     }
 }
