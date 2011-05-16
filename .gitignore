@@ -2,6 +2,7 @@
 *.user
 *.cache
 *.Cache
+*.docstates
 packages
 Packages
 Reports
