@@ -18,8 +18,6 @@ project_name = "MavenThought.PrDc.Demo"
 commit = Git.open(".").log.first.sha[0..10] rescue 'na'
 version = IO.readlines('VERSION')[0] rescue "0.0.0.0"
 build_folder = File.join('.', 'build', 'www')
-deploy_folder = "c:/temp/build/#{project_name}.#{version}_#{commit}"
-merged_folder = "#{deploy_folder}/merged"
 
 CLEAN.include("main/**/bin", "main/**/obj", "test/**/obj", "test/**/bin", "gem/lib/**", ".svn")
 
@@ -79,6 +77,47 @@ namespace :test do
 		nunit.options "/include #{args.tag}" unless ( args.tag.nil? )
 		nunit.assemblies FileList["test/acceptance/**/bin/debug/*Tests.dll"]
 	end
+end
+namespace :deploy do
+	
+	desc "Publish the site to a local build folder (via an MSBuild Publish target)"
+	msbuild :local, :config do |msb, args|
+
+		# set a default configuration
+		configuration = args[:config] || :Debug
+
+		# construct the absolute folder path to build_folder
+		complete_build_folder = File.expand_path(build_folder)
+
+		puts "Publish build locally to #{complete_build_folder}"
+
+		# clean out the build folder
+		puts "Removing '#{complete_build_folder}'..." if File.directory? complete_build_folder
+		rm_rf(complete_build_folder) if File.directory? complete_build_folder
+
+		# ensure the build folder exists
+		puts "Creating '#{complete_build_folder}'..." unless File.directory? complete_build_folder
+		FileUtils.mkdir_p(complete_build_folder) unless File.directory? complete_build_folder
+
+		# window-ize the paths
+		webprojoutdir = complete_build_folder.gsub('/', '\\')
+		bindir =  "#{complete_build_folder}/bin//".gsub('/', '\\')
+
+		puts
+		puts "Packaging as '#{configuration}'"
+		puts "----------------------------------"
+		puts "site to: '#{webprojoutdir}'"
+		puts "bins to: '#{bindir}'"
+		puts 
+
+		msb.targets :ResolveReferences,:_CopyWebApplication
+		msb.properties(
+			:configuration => configuration,
+			:webprojectoutputdir => webprojoutdir,
+			:outdir => bindir
+		)
+		msb.solution = www_proj_file
+	end	  
 end
 
 namespace :util do

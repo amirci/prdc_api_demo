@@ -1,6 +1,16 @@
-﻿           
+﻿@model IEnumerable<MavenThought.PrDC.Api.IPresenterSession>
+           
 @{
     ViewBag.Title = "Track Details";
 }
 
+<h2>Track @Model.First().Track</h2>
 
+@foreach (var session in Model) { 	
+    <div class="element session">
+        <p class="title">@session.Title</p>
+        <p>@session.Abstract</p>
+        <p><b>Style:</b> @session.Style</p>			        
+        <p><b>Speaker:</b> <i>@session.Presenter</i></p>
+    </div>
+}
