@@ -19,7 +19,7 @@ commit = Git.open(".").log.first.sha[0..10] rescue 'na'
 version = IO.readlines('VERSION')[0] rescue "0.0.0.0"
 build_folder = File.join('.', 'build', 'www')
 
-CLEAN.include("main/**/bin", "main/**/obj", "test/**/obj", "test/**/bin")
+CLEAN.include("main/**/bin", "main/**/obj", "test/**/obj", "test/**/bin", "build")
 
 CLOBBER.include("_Re*", "packages", "**/*.user", "**/*.cache", "**/*.suo", "*.docstate*")
 
