@@ -21,7 +21,7 @@ build_folder = File.join('.', 'build', 'www')
 
 CLEAN.include("main/**/bin", "main/**/obj", "test/**/obj", "test/**/bin", "build")
 
-CLOBBER.include("_Re*", "packages", "**/*.user", "**/*.cache", "**/*.suo", "*.docstate*")
+CLOBBER.include("_Re*", "packages", "**/*.user", "**/*.cache", "**/*.suo", "*.docstate*", "Test*.xml")
 
 desc 'Default build'
 task :default => ["build:all"]
