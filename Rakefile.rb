@@ -25,9 +25,9 @@ project_name = "MavenThought.PrDc.Demo"
 version = IO.readlines('VERSION')[0] rescue "0.0.0.0"
 build_folder = File.join('.', 'build', 'www')
 
-CLEAN.include("main/**/bin", "main/**/obj", "test/**/obj", "test/**/bin", "gem/lib/**", ".svn")
+CLEAN.include("main/**/bin", "main/**/obj", "test/**/obj", "test/**/bin", "build")
 
-CLOBBER.include("**/_*", "**/.svn", "packages/*", "lib/*", "**/*.user", "**/*.cache", "**/*.suo")
+CLOBBER.include("_Re*", "packages", "**/*.user", "**/*.cache", "**/*.suo", "*.docstate*", "Test*.xml")
 
 desc 'Default build'
 task :default => ["build:all"]
