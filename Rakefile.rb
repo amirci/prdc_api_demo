@@ -5,7 +5,6 @@ Gem.clear_paths
 
 require 'albacore'
 require 'rake/clean'
-require 'git'
 require 'set'
 
 include FileUtils
@@ -14,8 +13,15 @@ solution_file = FileList["*.sln"].first
 build_file = FileList["*.msbuild"].first
 www_proj_file = FileList["**/MavenThought.PrDc.Demo/*.csproj"].first
 
+begin
+	require 'git' 
+	commit = Git.open(".").log.first.sha[0..10]
+rescue
+	commit = 'na'
+	puts "Git not available"
+end
+
 project_name = "MavenThought.PrDc.Demo"
-commit = Git.open(".").log.first.sha[0..10] rescue 'na'
 version = IO.readlines('VERSION')[0] rescue "0.0.0.0"
 build_folder = File.join('.', 'build', 'www')
 
