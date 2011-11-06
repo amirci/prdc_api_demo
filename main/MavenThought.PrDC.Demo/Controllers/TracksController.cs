@@ -23,13 +23,13 @@ namespace MavenThought.PrDC.Demo.Controllers
         // GET: /Tracks/
         public ActionResult Index()
         {
-            return View(this._conference.Tracks);
+            return View();
         }
 
         // Get: /Tracks/Detail
         public ActionResult Detail(string track)
         {
-            return View(this._conference.SessionsForTrack(track));
+            return View();
         }
     }
 }

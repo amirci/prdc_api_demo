@@ -1,37 +1,16 @@
-﻿@model IEnumerable<MavenThought.PrDC.Api.ISpeaker>
+﻿@using MavenThought.PrDC.Demo.Helpers
+@model IEnumerable<MavenThought.PrDC.Api.ISpeaker>
            
 @{
     ViewBag.Title = "Speakers";
 }
-
 
 @foreach (var speaker in Model)
 {
     <div class="element speaker">
         <div class="title">@speaker.FirstName @speaker.LastName</div>
         <div class="location">@speaker.Location</div>
-        <div class="bio">@Html.Raw(speaker.Bio)</div>
-        <div class="contact">
-            @if (speaker.Email != string.Empty)
-            {
-                <a href="mailto:@speaker.Email" target="_blank">Email</a>
-            }
-
-            @if (speaker.Blog != string.Empty)
-            {
-		        <a href="http://@speaker.Blog" target="_blank">Blog</a>
-            }
-                                
-            @if (speaker.WebSite != string.Empty)
-            {
-  		        <a href="http://@speaker.WebSite" target="_blank">Website</a>
-            }
-
-            @if (speaker.Twitter != string.Empty)
-            {
-		        <a href="http://www.twitter.com/@speaker.Twitter" target="_blank">Twitter</a>
-            }
-        </div>
+        <div class="bio">@Html.Bio(speaker))</div>
+        <div class="contact">@Html.MediaLinks(speaker)</div>
     </div>
-    
 }

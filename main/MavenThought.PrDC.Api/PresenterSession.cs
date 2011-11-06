@@ -1,4 +1,6 @@
-﻿namespace MavenThought.PrDC.Api
+﻿using System.Collections.Generic;
+
+namespace MavenThought.PrDC.Api
 {
     /// <summary>
     /// Base implementation for a presenter session
@@ -11,12 +13,15 @@
 
         public string Abstract { get; set; }
 
-        public string Style { get; set; }
+        public IEnumerable<ISpeaker> Speakers
+        {
+            get; set; 
+        }
 
-        public string Presenter { get; set; }
-
-        public string Track { get; set; }
-
-        public int Year { get; set; }
+        public IEnumerable<string> Tags
+        {
+            get;
+            set;
+        }
     }
 }

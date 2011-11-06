@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace MavenThought.PrDC.Api
 {
     /// <summary>
@@ -8,9 +10,7 @@ namespace MavenThought.PrDC.Api
         int Id { get; set; }
         string Title { get; set; }
         string Abstract { get; set; }
-        string Style { get; set; }
-        string Presenter { get; set; }
-        string Track { get; set; }
-        int Year { get; set; }
+        IEnumerable<ISpeaker> Speakers { get; set; }
+        IEnumerable<string> Tags { get; set; }
     }
 }

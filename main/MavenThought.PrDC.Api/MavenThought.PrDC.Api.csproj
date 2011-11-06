@@ -31,14 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EasyHttp">
-      <HintPath>..\..\packages\EasyHttp.1.0.1\lib\EasyHttp.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.4.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="JsonFx">
-      <HintPath>..\..\packages\JsonFx.2.0\lib\.NetFramework 4.0\JsonFx.dll</HintPath>
-    </Reference>
-    <Reference Include="StructureMap">
-      <HintPath>..\..\packages\structuremap.2.6.2\lib\StructureMap.dll</HintPath>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\packages\RestSharp.102.3\lib\net35\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

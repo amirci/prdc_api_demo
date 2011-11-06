@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using MavenThought.PrDC.Api;
 
 namespace MavenThought.PrDC.Demo.Controllers
@@ -23,7 +24,7 @@ namespace MavenThought.PrDC.Demo.Controllers
         // GET: /Speakers/
         public ActionResult Index()
         {
-            return View(conferenceRepo.Speakers);
+            return View(conferenceRepo.Speakers.OrderBy(sp => sp.LastName));
         }
     }
 }
