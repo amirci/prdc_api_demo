@@ -39,7 +39,9 @@ namespace MavenThought.PrDC.Api
 
                 var request = new RestRequest { Resource = "sessions", RootElement = "sessions" };
 
-                return client.Execute<List<PresenterSession>>(request).Data;
+                var response = client.Execute<List<Session>>(request);
+
+                return response.Data;
             }
         }
     }

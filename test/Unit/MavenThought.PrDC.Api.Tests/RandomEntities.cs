@@ -40,11 +40,7 @@ namespace MavenThought.PrDC.Api.Tests
             return new Session
             {
                 Id = new DateTime().Millisecond,
-                Track = string.Format("Tracks {0}", i),
                 Abstract = "This is a very nice session",
-                Presenter = string.Format("Presenter {0}", i),
-                Style = "Dojo",
-                Year = 2011,
                 Title = string.Format("How to work with lions part {0}", i)
             };
         }
